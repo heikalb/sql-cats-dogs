@@ -14,7 +14,7 @@ def main():
     column_names = [f'{c} TEXT' for c in df]
 
     # Create table
-    cursor.execute(f"""CREATE TABLE animals ({', '.join(column_names)})""")
+    cursor.execute(f"CREATE TABLE animals ({', '.join(column_names)})")
 
     # Done
     connection.commit()

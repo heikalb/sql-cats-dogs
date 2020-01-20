@@ -21,9 +21,6 @@ def main():
         sql_values = ", ".join(values)
         c.execute(f"INSERT INTO animals VALUES ({sql_values})")
 
-    c.execute("SELECT * FROM animals")
-    print(c.fetchmany(10))
-
     conn.commit()
     conn.close()
 

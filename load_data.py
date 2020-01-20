@@ -3,7 +3,7 @@ import sqlite3
 
 
 def main():
-    # Create database
+    # Connect to database
     conn = sqlite3.connect('shelter_animals.db')
     c = conn.cursor()
 
@@ -18,6 +18,7 @@ def main():
         sql_values = ", ".join(values)
         c.execute(f"INSERT INTO animals VALUES ({sql_values})")
 
+    # Done
     conn.commit()
     conn.close()
 

@@ -11,9 +11,6 @@ def main():
     df = pd.read_csv('aac_shelter_outcomes.csv')
 
     # Insert data into database
-    column_names = [c for c in df]
-    num_columns = len([c for c in df])
-
     for index, row in df.iterrows():
         values = [str(v).replace("\'", "") for v in row]
         values = [f"\'{v}\'" for v in values]

@@ -6,6 +6,16 @@ def main():
     conn = sqlite3.connect('shelter_animals.db')
     c = conn.cursor()
 
+    # Show sample data
+    c.execute("SELECT * FROM animals")
+    print('Showing sample data')
+
+    for row in c.fetchmany(10):
+        print(row)
+
+    print('\n')
+
+
     # Show number of animals in shelter
     c.execute("SELECT * FROM animals")
     print('Number of animals in shelter: ', len(c.fetchall()))

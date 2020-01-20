@@ -2,13 +2,17 @@ import sqlite3
 
 
 def main():
-    connection = sqlite3.connect('shelter_animals.db')
-    cursor = connection.cursor()
+    # Connect to database
+    conn = sqlite3.connect('shelter_animals.db')
+    c = conn.cursor()
 
-    cursor.execute("DROP TABLE animals")
+    # Drop table
+    c.execute("DROP TABLE animals")
+    print('Number of animals in shelter: ', )
 
-    connection.commit()
-    connection.close()
+    # Done
+    conn.commit()
+    conn.close()
 
 
 if __name__ == '__main__':

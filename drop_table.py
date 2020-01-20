@@ -8,7 +8,6 @@ def main():
 
     # Drop table
     c.execute("DROP TABLE animals")
-    print('Number of animals in shelter: ', )
 
     # Done
     conn.commit()

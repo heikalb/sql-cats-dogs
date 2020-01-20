@@ -4,8 +4,8 @@ import sqlite3
 
 def main():
     # Create database
-    connection = sqlite3.connect('shelter_animals.db')
-    cursor = connection.cursor()
+    conn = sqlite3.connect('shelter_animals.db')
+    c = conn.cursor()
 
     # Read data
     df = pd.read_csv('aac_shelter_outcomes.csv')
@@ -14,11 +14,11 @@ def main():
     column_names = [f'{c} TEXT' for c in df]
 
     # Create table
-    cursor.execute(f"CREATE TABLE animals ({', '.join(column_names)})")
+    c.execute(f"CREATE TABLE animals ({', '.join(column_names)})")
 
     # Done
-    connection.commit()
-    connection.close()
+    conn.commit()
+    conn.close()
 
 
 if __name__ == '__main__':

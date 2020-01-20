@@ -1,3 +1,7 @@
+"""
+Drop the animals table in the shelter_animals.db database (for starting over).
+Heikal Badrulhisham, 2020 <heikal93@gmail.com>
+"""
 import sqlite3
 
 

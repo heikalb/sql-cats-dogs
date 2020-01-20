@@ -1,3 +1,8 @@
+"""
+Create a database and a table within.
+Heikal Badrulhisham, 2020 <heikal93@gmail.com>
+"""
+
 import pandas as pd
 import sqlite3
 

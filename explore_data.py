@@ -1,3 +1,7 @@
+"""
+Perform data exploration on the database.
+Heikal Badrulhisham, 2020 <heikal93@gmail.com>
+"""
 import sqlite3
 
 

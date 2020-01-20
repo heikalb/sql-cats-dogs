@@ -1,3 +1,7 @@
+"""
+Insert animal shelter data into a table in the databse.
+Heikal Badrulhisham, 2020 <heikal93@gmail.com>
+"""
 import pandas as pd
 import sqlite3
 
